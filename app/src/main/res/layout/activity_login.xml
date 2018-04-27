@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="25px"
+        android:paddingRight="25px"
+        android:orientation="vertical">
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="国家/地区"
+                android:textSize="28px"
+                android:textColor="@color/black0"
+                android:layout_marginLeft="20px"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="中国"
+                android:textSize="28px"
+                android:layout_marginRight="20px"
+                android:textColor="@color/green1"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+        <View  style="@style/Line"/>
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="25px"
+            android:paddingRight="25px"
+            android:layout_height="100px">
+
+            <TextView
+                android:layout_width="120px"
+                android:layout_height="wrap_content"
+                android:text="+86"
+                android:textSize="28px"
+                android:textColor="@color/black0"/>
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="你的手机号码"
+                android:inputType="phone"
+                android:textColorHint="@color/gray3"
+                android:textSize="28px"
+                android:text=""/>
+        </com.zhy.autolayout.AutoLinearLayout>
+        <View  style="@style/Line"/>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="25px"
+            android:paddingRight="25px"
+            android:layout_height="100px">
+            <TextView
+                android:layout_width="120px"
+                android:layout_height="wrap_content"
+                android:text="密码"
+                android:textSize="28px"
+                android:textColor="@color/black0"/>
+
+            <EditText
+                android:id="@+id/etPwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="填写密码"
+                android:inputType="textPassword"
+                android:backgroundTint="@color/gray3"
+                android:textSize="28px"
+                android:text=""/>
+        </com.zhy.autolayout.AutoLinearLayout>
+        <View  style="@style/Line"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginBottom="30px"
+            android:layout_marginTop="35px"
+            android:enabled="true"
+            android:background="@drawable/selector_login_btn"
+            android:text="登录"
+            android:textColor="@color/selector_login_btn"
+            android:textSize="30px"
+            android:layout_height="90px" />
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:text="用短信验证码登录"
+            android:gravity="center"
+            android:textColor="@color/blue0"
+            android:textSize="28px"
+            />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_weight="5"
+        android:layout_height="0dp">
+        
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40px"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvProblems"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10px"
+                android:text="登录遇到问题?"
+                android:textSize="28px"
+                android:textColor="@color/blue0"/>
+            <TextView
+                android:id="@+id/tvOtherLogin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10px"
+                android:text="使用其他方式登录"
+                android:textSize="28px"
+                android:textColor="@color/blue0"/>
+            
+        </com.zhy.autolayout.AutoLinearLayout>
+        
+        
+    </com.zhy.autolayout.AutoRelativeLayout>    
+    
+    
+    
+</com.zhy.autolayout.AutoLinearLayout>

@@ -18,7 +18,7 @@
             android:name="design_height"
             android:value="1280">
         </meta-data>
-        <activity android:name=".ui.activity.RegisterActivity">
+        <activity android:name=".ui.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,8 +26,12 @@
             </intent-filter>
         </activity>
 
-        <!--<activity android:name=".ui.activity.RegisterActivity"-->
-            <!--android:screenOrientation="portrait"/>-->
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.RegisterActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.LoginActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

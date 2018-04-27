@@ -1,10 +1,13 @@
 package com.aliang.imitatewechat.ui.base;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.aliang.imitatewechat.app.MyApp;
+
+import butterknife.ButterKnife;
 
 /**
  * Created by AlvinMoon on 2018/4/26.
@@ -26,22 +29,22 @@ public abstract class BaseActivity<V,T extends BasePresenter<V>> extends AppComp
         }
         /**子类不再需要设置布局ID，也不再需要使用ButterKnife.bind()**/
         setContentView(provideContentViewId());
-
+        ButterKnife.bind(this);
 
         initView();
         initData();
         initListener();
     }
 
-    private void initView() {
+    protected void initView() {
 
     }
 
-    private void initData() {
+    protected void initData() {
 
     }
 
-    private void initListener() {
+    protected void initListener() {
 
     }
 
@@ -52,7 +55,7 @@ public abstract class BaseActivity<V,T extends BasePresenter<V>> extends AppComp
     protected abstract T createPresenter();
 
     //在setContentView()调用之前调用，可以设置WindowFeature(如：this.requestWindowFeature(Window.FEATURE_NO_TITLE);)
-    private void init() {
+    protected void init() {
 
     }
 
@@ -62,5 +65,10 @@ public abstract class BaseActivity<V,T extends BasePresenter<V>> extends AppComp
         if(mPresenter != null){
             mPresenter.detachView();
         }
+    }
+
+    public void jumpToActivity(Class activity) {
+        Intent intent = new Intent(this, activity);
+        startActivity(intent);
     }
 }
